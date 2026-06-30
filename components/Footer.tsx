@@ -1,7 +1,13 @@
-function Footer() {
+interface FooterProps {
+  companyName: string;
+}
+
+function Footer({ companyName }: FooterProps) {
   return (
     <footer>
-      <p>© 2026 E-Commerce Store</p>
+      <hr />
+
+      <p>© 2026 {companyName}</p>
     </footer>
   );
 }

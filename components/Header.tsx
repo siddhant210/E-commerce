@@ -1,7 +1,11 @@
-function Header() {
+interface HeaderProps {
+  title: string;
+}
+
+function Header({ title }: HeaderProps) {
   return (
     <header>
-      <h1>E-Commerce Store</h1>
+      <h1>{title}</h1>
 
       <nav>
         <ul>
@@ -11,6 +15,8 @@ function Header() {
           <li>Contact</li>
         </ul>
       </nav>
+
+      <hr />
     </header>
   );
 }
