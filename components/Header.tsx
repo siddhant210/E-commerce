@@ -15,8 +15,6 @@ function Header({ title }: HeaderProps) {
           <li>Contact</li>
         </ul>
       </nav>
-
-      <hr />
     </header>
   );
 }

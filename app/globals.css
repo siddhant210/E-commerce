@@ -1,26 +1,86 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: #f4f4f4;
   font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+main {
+  width: 80%;
+  margin: 30px auto;
+}
+
+header {
+  background-color: #2563eb;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 15px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav li {
+  cursor: pointer;
+}
+
+.wrapper {
+  background: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  margin-top: 20px;
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+input,
+select {
+  width: 300px;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  background: royalblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: blue;
+}
+
+.products {
+  margin-top: 30px;
+}
+
+.products ul {
+  list-style: none;
+}
+
+.products li {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 6px;
 }
