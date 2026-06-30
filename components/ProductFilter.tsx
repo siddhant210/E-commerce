@@ -1,15 +1,23 @@
-//day 10
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function ProductFilter() {
 
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState<string>("");
 
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState<string>("All");
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+
+    inputRef.current?.focus();
+
+  }, []);
 
   return (
+
     <div>
 
       <h2>Product Filter</h2>
@@ -21,6 +29,7 @@ function ProductFilter() {
       <br />
 
       <input
+        ref={inputRef}
         type="text"
         placeholder="Search..."
         value={search}
@@ -52,11 +61,13 @@ function ProductFilter() {
       <p>{search}</p>
 
       <h3>Selected Category</h3>
-   
+
       <p>{category}</p>
 
     </div>
+
   );
+
 }
 
 export default ProductFilter;

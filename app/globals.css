@@ -16,7 +16,7 @@ main {
 }
 
 header {
-  background-color: #2563eb;
+  background-color: #9c168a;
   color: white;
   padding: 20px;
 }
@@ -42,7 +42,7 @@ nav li {
   border-radius: 8px;
 }
 
-footer {
+footer {  
   margin-top: 20px;
   background: #1f2937;
   color: white;
@@ -60,14 +60,14 @@ select {
 
 button {
   padding: 10px 20px;
-  background: royalblue;
-  color: white;
+  background: rgb(214, 18, 172);
+  color: #4e046b;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background: blue;
+  background: rgb(173, 19, 179);
 }
 
 .products {
