@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import useFetch from "../hooks/useFetch";
 
 interface Product {
 
@@ -16,39 +16,15 @@ interface Product {
 
 function ProductList() {
 
-  const [products, setProducts] = useState<Product[]>([]);
+  const {
 
-  const [loading, setLoading] = useState<boolean>(true);
+    data: products,
 
-  const [error, setError] = useState<string>("");
+    loading,
 
-  useEffect(() => {
+    error
 
-    async function fetchProducts() {
-
-      try {
-
-        const response = await fetch("https://fakestoreapi.com/products");
-
-        const data: Product[] = await response.json();
-
-        setProducts(data);
-
-      } catch {
-
-        setError("Failed to load products.");
-
-      } finally {
-
-        setLoading(false);
-
-      }
-
-    }
-
-    fetchProducts();
-
-  }, []);
+  } = useFetch<Product>("https://fakestoreapi.com/products");
 
   if (loading) {
 
@@ -74,7 +50,7 @@ function ProductList() {
 
           <li key={product.id}>
 
-            {product.title}
+            <strong>{product.title}</strong>
 
             <br />
 
