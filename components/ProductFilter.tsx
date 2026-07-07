@@ -71,4 +71,3 @@ function ProductFilter() {
 }
 
 export default ProductFilter; 
-//hoo
